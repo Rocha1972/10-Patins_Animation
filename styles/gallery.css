@@ -35,11 +35,11 @@ section.gallery {
 
     animation: image-appear linear backwards;
     /* Usei o 20% no View para suavizar a subida das imagens */
-    animation-timeline: view(20%);
-    animation-range: 100px 350px;
+    animation-timeline: view(25%);
+    animation-range: 100px 250px;
 
     &[data-delay] {
-      animation-range: 160px 390px;
+      animation-range: 150px 300px;
     }
 
     & > img {
