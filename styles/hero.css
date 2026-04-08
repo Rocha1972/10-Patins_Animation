@@ -1,14 +1,18 @@
 section.hero {
-  max-width: 80rem;
+  /* border: 1px solid sienna; */
+  /* max-width: 80rem; */
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 0.75rem 1.5rem;
   margin-inline: auto;
 
   display: flex;
+  /* Comando para o mobile*/
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
 
   & h1 {
+    /* border: 1px solid green; */
     max-width: 40rem;
   }
 
@@ -16,7 +20,7 @@ section.hero {
     /* border: 1px solid red; */
     display: inline-block;
     overflow: hidden;
-    height: 5rem;
+    height: 2.5rem;
     width: min-content;
     vertical-align: bottom;
   }
@@ -35,12 +39,14 @@ section.hero {
   & h1 span {
     display: block;
 
-    animation: slideUp 5s 2s ease infinite;
+    animation: slideUpMobile 5s 2s ease infinite;
   }
 
   /* Buttons */
   & .buttons {
+    /* border: 1px solid blue; */
     display: flex;
+    flex-direction: column-reverse;
     gap: 2rem;
     margin-top: 3rem;
 
@@ -81,10 +87,11 @@ section.hero {
 
   /* Patins */
   & > div:nth-child(2) {
+    /* border: 1px solid blueviolet; */
     display: block;
     width: 100%;
     max-width: 30.5rem;
-    height: 30.5rem;
+    height: 23rem;
 
     /* border: 1px solid red; */
 
@@ -155,9 +162,7 @@ section.hero {
 }
 
 
-
-
-@keyframes slideUp {
+@keyframes slideUpMobile {
   /* radical */
   0%, 22% {
     transform: translateY(0);
@@ -165,67 +170,176 @@ section.hero {
 
   /* divertida in*/
   23% {
-    transform: translateY(calc(-5rem - 15px));
+    transform: translateY(calc(-2.5rem - 15px));
   }
 
   25% {
-    transform: translateY(calc(-5rem + 10px));
+    transform: translateY(calc(-2.5rem + 10px));
   }
 
   27% {
-    transform: translateY(calc(-5rem - 5px));
+    transform: translateY(calc(-2.5rem - 5px));
   }
 
   29% {
-    transform: translateY(calc(-5rem + 5px));
+    transform: translateY(calc(-2.5rem + 5px));
   }
 
   /* divertida static*/
   33%, 55% {
-    transform: translateY(-5rem);
+    transform: translateY(-2.5rem);
   }
 
   /* saudável in*/
   56% {
-    transform: translateY(calc(-10rem - 15px));
+    transform: translateY(calc(-5rem - 15px));
   }
 
   58% {
-    transform: translateY(calc(-10rem + 10px));
+    transform: translateY(calc(-5rem + 10px));
   }
 
   60% {
-    transform: translateY(calc(-10rem - 5px));
+    transform: translateY(calc(-5rem - 5px));
   }
 
   62% {
-    transform: translateY(calc(-10rem + 5px));
+    transform: translateY(calc(-5rem + 5px));
   }
 
   /* saudável static*/
   66%, 88% {
-    transform: translateY(-10rem);
+    transform: translateY(-5rem);
   }
 
   /* radical in*/
   90% {
-    transform: translateY(calc(-15rem - 15px));
+    transform: translateY(calc(-7.5rem - 15px));
   }
 
   92% {
-    transform: translateY(calc(-15rem + 10px));
+    transform: translateY(calc(-7.5rem + 10px));
   }
 
   94% {
-    transform: translateY(calc(-15rem - 5px));
+    transform: translateY(calc(-7.5rem - 5px));
   }
 
   96% {
-    transform: translateY(calc(-15rem + 5px));
+    transform: translateY(calc(-7.5rem + 5px));
   }
 
   100% {
-    transform: translateY(-15rem);
+    transform: translateY(-7.5rem);
   }
 
+}
+
+/* Comando para o mobile*/
+/* flex-direction: column-reverse; */
+
+@media (width >= 80rem) {
+  & .container {
+    --max-width: 80rem;
+    padding: 2.5rem 2rem;
+  }
+
+  & section.hero {
+    flex-direction: row;
+
+    & .buttons {
+      flex-direction: row;
+    }
+
+    & h1 div {
+      height: 5rem;
+      vertical-align: bottom;
+    }
+
+    & h1 span {
+      animation: slideUp 5s 2s ease infinite;
+    }
+
+    & > div:nth-child(2) {
+      height: 30.5rem;
+  }
+
+  @keyframes slideUp {
+    /* radical */
+    0%, 22% {
+      transform: translateY(0);
+    }
+  
+    /* divertida in*/
+    23% {
+      transform: translateY(calc(-5rem - 15px));
+    }
+  
+    25% {
+      transform: translateY(calc(-5rem + 10px));
+    }
+  
+    27% {
+      transform: translateY(calc(-5rem - 5px));
+    }
+  
+    29% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+  
+    /* divertida static*/
+    33%, 55% {
+      transform: translateY(-5rem);
+    }
+  
+    /* saudável in*/
+    56% {
+      transform: translateY(calc(-10rem - 15px));
+    }
+  
+    58% {
+      transform: translateY(calc(-10rem + 10px));
+    }
+  
+    60% {
+      transform: translateY(calc(-10rem - 5px));
+    }
+  
+    62% {
+      transform: translateY(calc(-10rem + 5px));
+    }
+  
+    /* saudável static*/
+    66%, 88% {
+      transform: translateY(-10rem);
+    }
+  
+    /* radical in*/
+    90% {
+      transform: translateY(calc(-15rem - 15px));
+    }
+  
+    92% {
+      transform: translateY(calc(-15rem + 10px));
+    }
+  
+    94% {
+      transform: translateY(calc(-15rem - 5px));
+    }
+  
+    96% {
+      transform: translateY(calc(-15rem + 5px));
+    }
+  
+    100% {
+      transform: translateY(-15rem);
+    }
+  
+  }
+
+
+
+  
+
+  
 }

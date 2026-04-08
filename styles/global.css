@@ -21,8 +21,12 @@
   --ff-base: "Montserrat", sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-lg: 2.5rem;
-  --text-xl: 4rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+
+  /* Paddings */
+  --py-sm
+  --px-lg: 1.5rem
 }
 
 html, button {
@@ -46,4 +50,18 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Medida para Desktop 1280 */
+@media (width >= 80em) {
+  :root {
+    --max-width: 80rem;
+
+    /* Base */
+    --text-lg: 2.5rem;
+    --text-xl: 4rem;
+
+    /* Paddings */
+    --px-lg: 2rem
+  }
 }
