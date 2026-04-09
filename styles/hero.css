@@ -12,8 +12,9 @@ section.hero {
   justify-content: space-between;
 
   & h1 {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     max-width: 40rem;
+    margin-bottom: 2rem;
   }
 
   & h1 div {
@@ -44,11 +45,13 @@ section.hero {
 
   /* Buttons */
   & .buttons {
-    /* border: 1px solid blue; */
+    max-width: 20rem;
+    border: 1px solid blue;
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
-    margin-top: 3rem;
+    margin: auto;
+
 
     & .button {
       display: flex;
@@ -244,10 +247,11 @@ section.hero {
     padding: 2.5rem 2rem;
   }
 
-  & section.hero {
+    & section.hero {
     flex-direction: row;
 
     & .buttons {
+      max-width: none;
       flex-direction: row;
     }
 
