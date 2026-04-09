@@ -1,9 +1,9 @@
 .container {
-  --max-width: 360px;
+  --max-width: 375px;
   width: min(var(--max-width), 100% - var(--px-lg) * 2);
 }
 
-@media (width >= 80em) {
+@media (width >= 80rem) {
   .container {
     --max-width: 80rem;
   }
