@@ -19,7 +19,7 @@
   --background: #fafafa;
 
   --ff-base: "Montserrat", sans-serif;
-  --text-sm: 0.875rem;
+  --text-sm: 0.75rem;
   --text-base: 1rem;
   --text-lg: 1.5rem;
   --text-xl: 2rem;
@@ -58,6 +58,7 @@ a {
     --max-width: 80rem;
 
     /* Base */
+    --text-sm: 0.875rem;
     --text-lg: 2.5rem;
     --text-xl: 4rem;
 

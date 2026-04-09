@@ -1,15 +1,21 @@
 section.gallery {
   width: 100%;
   max-width: 80rem;
-  padding: 2.5rem 2rem;
+  padding: 2rem 2rem;
   margin-inline: auto;
 
   & header {
-    text-align: center;    
+    text-align: center;
+
+    & h2 {
+      margin-top: 0.3rem;
+    }
   }
 
   & header span {
+    
     font: 500 var(--text-sm)/1.5 var(--ff-base);
+    /* margin-bottom: 5rem; */
   }
 
   & img {
@@ -21,8 +27,10 @@ section.gallery {
     margin-top: 2rem;
     display: grid;
     grid-template-areas:
-    "A B B"
-    "C C D";
+    "A"
+    "B"
+    "C"
+    "D";
 
     gap: 2.5rem;
   }
@@ -34,7 +42,6 @@ section.gallery {
     line-height: 0;
 
     animation: image-appear linear backwards;
-    /* Usei o 20% no View para suavizar a subida das imagens */
     animation-timeline: view(25%);
     animation-range: 100px 250px;
 
@@ -43,7 +50,7 @@ section.gallery {
     }
 
     & > img {
-      height: 25rem;
+      height: 16rem;
       object-fit: cover;
       transition: scale 500ms;
     }
@@ -110,4 +117,27 @@ section.gallery {
     opacity: 0;
     transform: translateY(100%);
   }  
+}
+
+@media (width >= 80em) {
+  & section.gallery {
+    padding: 2.5rem 2rem;
+
+    & .content {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-areas:
+      "A B B"
+      "C C D";
+
+      gap: 2.5rem;
+    }
+
+    & figure {
+      & > img {
+        height: 25rem;      
+      }
+    }
+  }
+
 }
