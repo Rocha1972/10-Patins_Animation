@@ -5,6 +5,9 @@
 }
 
 :root {
+  max-width: 375px;
+  margin-inline: auto;
+
   /* Marca */
   --snitap-sun: #FFCD1E;
   --snitap-sky-mid: #06B6D4;
@@ -55,7 +58,7 @@ a {
 /* Medida para Desktop 1280 */
 @media (width >= 80em) {
   :root {
-    --max-width: 80rem;
+    max-width: 80rem;
 
     /* Base */
     --text-sm: 0.875rem;
