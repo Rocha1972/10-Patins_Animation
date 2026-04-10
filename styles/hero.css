@@ -1,5 +1,5 @@
 section.hero {
-  border: 1px solid sienna;
+  /* border: 1px solid sienna; */
   max-width: 80rem;
   width: 100%;
   padding: 0.75rem 1.5rem;
@@ -12,7 +12,7 @@ section.hero {
   justify-content: space-between;
 
   & h1 {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     max-width: 40rem;
     margin-bottom: 2rem;
   }
@@ -45,12 +45,12 @@ section.hero {
 
   /* Buttons */
   & .buttons {
-    max-width: 20rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    max-width: 18rem;
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
-    margin: auto;
+    margin-right: auto;
 
 
     & .button {
